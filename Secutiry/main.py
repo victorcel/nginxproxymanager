@@ -8,9 +8,11 @@ UMBRAL_FALLIDOS = 3  # Intentos fallidos antes de bloquear la IP
 INTERVALO_BLOQUEO = 60  # Segundos antes de desbloquear (opcional)
 ips_fallidas = defaultdict(int)  # Registro de intentos fallidos por IP
 
+
 def bloquear_ip(ip):
     print(f"Bloqueando IP: {ip}")
     subprocess.run(["sudo", "ufw", "deny", "from", ip])
+
 
 def monitorear_puerto():
     tcpdump_proc = subprocess.Popen(
@@ -38,7 +40,6 @@ def monitorear_puerto():
                     ips_fallidas[ip_origen] = 0
 
             buffer = ""
-
 
 
 if __name__ == "__main__":
