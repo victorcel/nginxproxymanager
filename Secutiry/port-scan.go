@@ -27,7 +27,7 @@ type Monitor struct {
 
 // NewMonitor creates a new Monitor instance
 func NewMonitor(config Config) (*Monitor, error) {
-	ipRegex, err := regexp.Compile(`IP\s(\d+\.\d+\.\d+\.\d+)\.\d+\s>\s(\d+\.\d+\.\d+\.\d+)\.\d+`)
+	ipRegex, err := regexp.Compile(`eth0\s{2}Out\s+IP\s(\d+\.\d+\.\d+\.\d+)\.\d+\s>\s(\d+\.\d+\.\d+\.\d+)\.\d+`)
 	if err != nil {
 		return nil, fmt.Errorf("failed to compile IP regex: %w", err)
 	}
