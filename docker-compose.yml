@@ -14,4 +14,4 @@ services:
       - botmax-external-network
 networks:
     botmax-external-network:
-      driver: bridge
+      external: true
