@@ -11,7 +11,10 @@ services:
       - ./data:/data
       - ./letsencrypt:/etc/letsencrypt
     networks:
+      - main-external-network
       - botmax-external-network
 networks:
-    botmax-external-network:
+    main-external-network:
       external: true
+    botmax-external-network:
+        external: true
