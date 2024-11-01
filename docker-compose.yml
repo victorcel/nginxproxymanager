@@ -11,8 +11,6 @@ services:
       - ./data:/data
       - ./letsencrypt:/etc/letsencrypt
       - ./logrotate.custom:/etc/logrotate.d/nginx-proxy-manager
-    depends_on:
-      - botmax-nginx
     networks:
       - main-external-network
 networks:
