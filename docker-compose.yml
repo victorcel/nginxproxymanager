@@ -12,7 +12,6 @@ services:
       - ./letsencrypt:/etc/letsencrypt
     networks:
       - main-external-network
-      - botmax-external-network
 networks:
     main-external-network:
       external: true
