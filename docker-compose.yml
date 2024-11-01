@@ -16,5 +16,3 @@ services:
 networks:
     main-external-network:
       external: true
-    botmax-external-network:
-        external: true
